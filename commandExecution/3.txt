@@ -1,0 +1,1 @@
+Let's try to cat the /etc/passwd file to output.

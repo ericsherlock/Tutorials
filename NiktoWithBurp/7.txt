@@ -1,0 +1,12 @@
+Now, we can run our Nikto scan again and see the requests coming in BurpSuite.
+Running the command: 
+
+			nikto -useproxy http://localhost:8080 -h 192.168.1.160
+
+We can see BurpSuite starting to intercept the packets. (Immediately forward
+the first few so that Nikto doesn't error out due to lack of response). 
+
+If we continuously forward the packets, we can see each request as they
+are made. You can see Nikto makes thousands of GET/POST requests. Many of
+which will return 404 not found errors. The rest of the responses will be 
+inspected for vulnerabilities.  

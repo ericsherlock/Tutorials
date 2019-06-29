@@ -1,0 +1,25 @@
+
+Defining IPTable rules tends to be daunting, in part, because
+the IPTables commands generally need multiple options for even
+a single rule. But this also affords you fine-grained control
+over your firewall and its implementation.
+
+Here, I'll list the most used options and what they do. (You can
+also see these options on the IPTables manual page).
+
+--> OPTIONS:
+		-t --> specifies the table to operate on
+		-P --> Sets overall policy for a given chain
+		-A --> Append a rule to a particular chain
+		-I --> Inserts appended rule into specific location
+		-D --> Delete a rule from a given chain
+		-j --> If rule criteria is met, jump to target
+		-s --> apply rule to source IP
+		-p --> apply rule to protocol 
+		-m --> applies rule to designated network state
+		-dport --> apply rule to a designated port number
+		-sport --> apply rule to a source port number
+
+Now, let's begin.
+
+

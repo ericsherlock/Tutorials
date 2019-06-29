@@ -1,0 +1,11 @@
+We can see that our injection attack worked! From the output, among the database information, we can see that there is a table called 'users'. 
+
+Knowing this, we can get the column names of the database. So go back to BurpSuite and toggle the 'Intercept is...' button to 'Intercept is Off' then again to 'Intercept is On' to clear any builtup packets. Then click 'Submit' on our webpage with any 'User ID' chosen. 
+
+Enter the following after the 'id=1' piece of SQL: or 1=1 union select null, column_name from information_schema.columns#
+
+In BurpSuite, click 'Forward' to send the packet onto its destination. 
+
+Near the bottom of the output, we can see there is a column for first_name, last_name, password, avatar, last_login, and failed_login. 
+
+So now that we know the table name and the column names for that table, we can craft a statement that returns user passwords. 

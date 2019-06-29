@@ -1,0 +1,22 @@
+
+To begin, let's get some background information on firewalls so we can better understand
+the overall structure of a firewall and how they work.
+
+For this information I'll be turning to the 'Linux Bible' by Christopher Negus 
+which is an incredibly extensive and thorough accounting of all things Linux 
+and is definitly worth buying if you can (link below): 
+
+	--> https://www.amazon.com/Linux-Bible-Christopher-Negus/dp/111821854X
+
+Let's start by explaining firewalls:
+	
+	"A Firewall for a computer blocks the transmission of malicious or unwanted data 
+	into and out of a computer system or network."
+
+In other terms, a firewall is a filter that inspects each packet coming to/from
+a network. It then chooses what to do with that packet based on the contents inside.
+
+There are multiple types of firewall:
+		--> Network or Host based
+		--> Hardware or software based
+		--> Network-layer or Application-layer filte

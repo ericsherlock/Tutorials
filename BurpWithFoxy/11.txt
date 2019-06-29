@@ -1,0 +1,17 @@
+It is common to get an error message saying 'Your connection is not secure' (Like shown here).
+This means we'll need to download and import the BurpSuite CA certificate in to Firefox.
+	*Note: If you have already imported the BurpSuite CA certificate, then you are done and
+			should be able to intercept traffic successfully)
+
+To begin the import, download the BurpSuite CA certificate by completing the following:
+
+	--> In BurpSuite turn 'Intercept is on' to 'Intercept is off'
+
+	--> Go back to Firefox and make sure FoxyProxy is still set to 'Use proxy Burp for all URLs'
+
+	--> Open a new tab in Firefox and go to: http://burp (Note: there is NO 'www' or .com/.net..etc)
+
+	--> You should see a simple web page that says 'Burp Suite Community Edition' at the top of the page
+			--> In the top right, click on the 'CA Certificate' text and download the CA Certificate. 
+
+

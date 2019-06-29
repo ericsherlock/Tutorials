@@ -1,0 +1,6 @@
+In order for the scan to finish, simply toggle the 'Intercept is ON' button
+in BurpSuite to 'Intercept is OFF'. (This may take some time).  
+
+Nikto is a powerful and popular vulnerability scanner that has much more to offer
+than what was covered in this video. Look through the Nikto man page for options about
+scanning databases, more in depth evasion techniques, and fine tuning your scans.

@@ -1,0 +1,5 @@
+It worked! The webpage returned the cookie of the current user. 
+
+If we look in the database (above), we can see that our comment is the full script we entered. 
+
+Now, every time a user visits that page, when the comments are processed the script will be run. 

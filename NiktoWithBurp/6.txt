@@ -1,0 +1,11 @@
+Rather than trying to be stealthy and hide our scans entirely, Nikto allows us to route our
+traffic through a web proxy with the '-useproxy' option. This will allow us to scan 
+the vulnerable server THROUGH another server, thus masking our IP address.
+
+For the purposes of this video, we'll be using localhost as our proxy (so the IP will
+be the same in the vulnerable server logs).
+
+This will also allow us to use BurpSuite to look at the Nikto requests as they happen. So first,
+open BurpSuite to a new temporary project and make sure 'Intercept is on' is active.
+
+

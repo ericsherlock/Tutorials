@@ -1,0 +1,1 @@
+Now you can use outline of the previous command to run any command on the vulnerable server.

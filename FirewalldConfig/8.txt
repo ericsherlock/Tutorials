@@ -1,0 +1,35 @@
+The previous configuration changes will only work for the current runtime
+session. To make any changes permanent through reboots we will need to
+add the '--permanent' flag to each command. 
+
+****PLEASE NOTE: Something that can get confusing is when the changes are made 
+permanently vs in runtime. If you make changes with the '--permanent' option
+you MUST reload the firewall before you will see these changes take place. If 
+you make changes to the current runtime configuration, the changes will 
+take place immediately. I'll show a quick example of this by adding
+ the smtp service to the default configuration 
+
+	--> **Note: My starting configuration has only the HTTPS and SSH 
+			    services currently defined.
+
+--> See current default config:     firewall-cmd --list-services 
+--> Add smtp to default config:     firewall-cmd --permanent --add-service=smtp
+--> Smtp not added to config:       firewall-cmd --list-services
+--> Reload the firewall:            firewall-cmd --reload
+--> Smtp now added to config:       firewall-cmd --list-services
+
+***ALSO NOTE: It can also be confusing when you reload the firewall only to 
+see the changes you made have been erased. This will happen when changes are 
+made to the firewalld runtime configuration but not the default configuration. 
+This means that whenever you reload the firewall, any temporary changes to the 
+runtime configuration will be erased and the rules that were active in the default 
+configuration will return. I'll show an example of this by removing the 'smtp' 
+service and adding 'http' service. These changes will take place immediately in 
+the runtime configuration but replaced by the default configuration on firewall reload:
+
+--> Remove smtp from runtime config:              firewall-cmd --remove-service=smtp
+--> Add http to runtime config:                   firewall-cmd --add-service=http
+--> Smtp erased & http added to runtime config:   firewall-cmd --list-services
+--> Smtp & http will be erased at reload:         firewall-cmd --reload
+--> Changes replaced upon default config reload:  firewall-cmd --list-services
+

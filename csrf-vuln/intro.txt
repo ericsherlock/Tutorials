@@ -1,0 +1,9 @@
+Hey, Everyone!
+
+In this video we'll demonstrate how to execute a cross-site request forgery attack to change the administrator password of DVWA.
+
+We'll be using DVWA as a vulnerable banking website and BurpSuite to intercept web traffic. 
+
+As an overview, a CSRF attack tricks the victim into submitting a malicious request to the web server. Websites tend to save the credentials (cookies, IPs, etc.) of authenticated users. So if the user is authenticated on their web browser, the web server that receives the request won't have any way to tell if a request is legitimate or not.   
+
+Let's begin.

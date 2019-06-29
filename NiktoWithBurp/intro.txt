@@ -1,0 +1,10 @@
+Hey Everyone,
+
+       Today we will be learning how to scan a web server for vulnerabilities using Nikto.
+	   We'll also be using Burpsuite to examine the requests between Nikto and our web server.
+
+       According to the man pages:
+             
+              --> Nikto examines a web server to find potential problems and security vulnerabilities
+                   including server and software misconfigurations, default files and programs, outdated 
+                   servers and programs.

@@ -1,0 +1,41 @@
+
+To help explain how chains fit within the IPTables model, I'll refer 
+back to the 'Linux Bible' by Christopher Negus. According to Negus, 
+the incoming network packets for a given table are further divided
+into categories, called chains. There are 5 categories that a packet
+can be desinated as:
+
+-------------------------------------------------------------------------------
+		--> INPUT: Network packets coming into the Linux server
+-------------------------------------------------------------------------------
+		--> FORWARD: Network packets coming into the Linux server
+			     that are to be routed elsewhere.
+-------------------------------------------------------------------------------
+		--> OUTPUT: Network packets coming out of the linux server
+-------------------------------------------------------------------------------
+		--> PREROUTING: Used by NAT, for modifying network packets
+				when they come into the Linux server
+-------------------------------------------------------------------------------
+		--> POSTROUTING: Used by NAT, for modifying network packets
+				 before they come out of a Linux server
+-------------------------------------------------------------------------------
+
+Each table has a specific grouping of chains associated with it:
+
+		Filter --> INPUT, FORWARD, OUTPUT
+		NAT --> PREROUTING, OUTPUT, POSTROUTING
+		Mangle --> INPUT, FORWARD, PREROUTING, OUTPUT, POSTROUTING
+		Raw --> PREROUTING, OUTPUT
+		Security --> INPUT, FORWARD, OUTPUT
+
+Since we will be working mainly with the filter table, we will only 
+be using the chains associated with the filter table: INPUT, FORWARD, 
+OUTPUT.
+
+This is expected because the filter table is simply a packet filter
+and since PREROUTING and POSTROUTING deal with NAT, we won't need
+them. For more information, visit the netfilter/iptables docs here:
+
+			https://netfilter.org/documentation 
+
+

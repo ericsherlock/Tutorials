@@ -1,0 +1,7 @@
+Let's look at the code within the banking (DVWA) site to see what kind of sanitation the site employs (Note: I'm using an open SSH connection to the vulnerable server).  
+
+We can see that the main method to sanitize user input is the method 'mysqli_real_escape_string()'. After this is called, the query is crafted and sent to the database.  
+
+After some research we have found a problem in mysql_real_escape_string(). The issue is that this method focuses on escaping and preventing injection of **string variables** but does not prevent the use of MySQL keywords or integers. Thus, an SQL statement without string variables will be able to be passed on to the database with no problem.
+
+Now we can craft an SQL statment that can return information on the database with these limitations in mind. 

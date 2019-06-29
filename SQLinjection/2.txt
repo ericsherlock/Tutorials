@@ -1,0 +1,10 @@
+To begin, let's get BurpSuite up and running...
+	--->Open Burpsuite to temporary project
+	--> Firefox --> Preferences --> Advanced --> Network --> Settings
+		--> Click on "Manual Proxy Configuration'
+		--> Check the box 'Use this proxy server for all protocols'
+		--> Delete anything in the 'No proxy for: ' text area
+	--> Click OK and return to DVWA.
+
+	--Go back to BurpSuite
+		--> Go to Proxy tab and toggle the 'intercept is on/off' button to 'Intercept is ON'

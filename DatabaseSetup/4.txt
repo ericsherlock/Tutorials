@@ -1,0 +1,40 @@
+
+A Primary Key is defined to be a portion of a row used to uniquely identify a row in a table which 
+consists of one or more column names. In order to create a relationship between two tables, the 
+attributes that define the primary key in one table must appear as attributes in another table which 
+is referred to as a foreign key. 
+
+In other words, our main table will have a column where each row has a unique value, like how a phone
+book has a unique number for each person listed. This is an example of a primary key. Now if we take 
+that same column of phone numbers and replicate it on another table, it is called a foreign key. A 
+small diagram below illustrates the idea:
+
+Customer Info (Primary Key = Phone):			Billing Info (Foreign Key = Phone):
+-----------------------------------------               -------------------------------------------------------       
+| Phone    | First Name   | Last Name   |		| ID | Phone    | Address           | Credit Card     |
+-----------------------------------------		-------------------------------------------------------
+| 555-2368 | Ghost        | Busters     |		| 1  | 555-2368 | 14 North Moore St | 123456789123456 |
+-----------------------------------------		-------------------------------------------------------
+| 555-0840 | Danny	  | McGraf	|		| 2  | 555-0840 | 1 Madison Way     | 987654321987654 |
+-----------------------------------------               -------------------------------------------------------
+
+Here, the primary key in the "Customer Info" table is the customer phone number. That same column of phone
+numbers in the "Billing Info" table is referred to as the foreign key. The difference here is that in 
+the "Customer Info" table each phone number can only be used a single time because each row defined by a 
+primary key must be unique. Whereas, in the "Billing Info" table a phone number that appears as a foreign 
+key can be in the table any number of times. For example, it would be valid to have a second set of billing 
+information for the Ghost Busters: 
+
+Customer Info (Primary Key = Phone):			Billing Info (Foreign Key = Phone):
+-----------------------------------------               -------------------------------------------------------       
+| Phone    | First Name   | Last Name   |		| ID | Phone    | Address           | Credit Card     |
+-----------------------------------------		-------------------------------------------------------
+| 555-2368 | Ghost        | Busters     |		| 1  | 555-2368 | 14 North Moore St | 123456789123456 |
+-----------------------------------------		-------------------------------------------------------
+| 555-0840 | Danny	  | McGraf	|		| 2  | 555-0840 | 1 Madison Way     | 987654321987654 |
+-----------------------------------------               -------------------------------------------------------
+					                | 3  | 555-2368 | 15 South Less St  | 654654654654654 |
+							-------------------------------------------------------
+This ensures there is a 1-to-many relationship between a row in a table with the primary key
+and the rows in the table with a foreign key. 
+

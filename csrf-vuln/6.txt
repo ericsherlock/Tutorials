@@ -1,0 +1,9 @@
+Before we continue, we need to turn back on BurpSuite to intercept packets, so change the "Intercept is..." button to "Intercept is ON"
+
+Now if we click on one of the malicious links, we will see the request in our BurpSuite window. 
+
+Inspecting this request we can see the attackers passwords are being set. We can also see that the referer is our own server, and not the Bank's (DVWA) server.
+
+We need to paste into the referer field the referer link that we copied earlier.
+
+Once we make these changes, we can click on the 'Forward' button on BurpSuite.

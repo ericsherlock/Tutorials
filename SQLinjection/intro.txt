@@ -1,0 +1,5 @@
+Hey, Everyone!
+
+In this video we will demonstrate how to execute an SQL Injection attack to obtain usernames and passwords from a database using DVWA and BurpSuite.
+
+For some background, SQL Injection (SQLi) is a code injection attack aimed at getting the database to inadvertantly return sensative information. Accomplished by injecting SQL statements into an input field these attacks are possible as result of not sanitizing the user input correctly.

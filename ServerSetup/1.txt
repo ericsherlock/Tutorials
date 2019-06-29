@@ -1,0 +1,24 @@
+
+For some background information, let's go over the individual components of the LAMP stack:
+
+L) The Linux part of our stack is covered by our using CentOS. According to the CentOS Project 
+website (www.centos.org), CentOS is a stable, predictable, manageable and reproudcible
+platform derived from the sources of Red Hat Enterprise Linux (RHEL). 
+
+A) According to the Linux Bible by Christopher Negus, Apache HTTP provides the service with 
+which the client web browsers communicate. The daemon process runs in the background on 
+your server and waits for requests from web clients. Web browsers provide those connections 
+to the HTTP daemon and send requests, which the daemon interprets, sending back the appropriate data. 
+
+M) The 'M' in the LAMP stack is for MySQL but for this video I will be using MariaDB instead.
+According to mariadb.org, MariaDB is an open-source software and as a relational database it provides
+an SQL interface for accessing data. MariaDB was developed by the same engineers who developed the 
+original SQL. The goal was for MariaDB to be a completely open-source replacement for SQL after it was
+aquired by Oracle.  
+
+P) Accoring to php.net, PHP is a widely-used open source general-purpose scripting language that
+is especially suited for web development and can be embedded into HTML. PHP allows the server to
+generate dynamic output. While PHP is often used, you can also use other scripting languages like
+Perl or Python to acheive similar results. 
+
+ 

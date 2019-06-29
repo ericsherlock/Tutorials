@@ -1,0 +1,39 @@
+
+Now that we know what elements make up a LAMP stack, let's go over how it all works together.
+Here is a small view of how these work so you can have an idea of what's going on before 
+explaining them:
+
+----------------------------------------------------------------------------
+| Linux: CentOS                                                            |
+|                            ----------                                    |       ---------------
+|                            | APACHE | <----------------------------------------> | Outside Web |
+|                            | SERVER |                                    |       | Browser     |
+|                            ----------                                    |       ---------------
+|                               ^   ^                                      |
+|                               |   |                                      |
+|                               |   |                                      |
+|				v   v                                      |
+|       _____________________________________________                      |
+|       | Web Pages                                  |                     |
+|       |   ---------------        	----------   |        ---------    |
+|       |   | HTML, CSS   |<----------->| PHP    | <--------> | MySQL |    |
+|       |   | JavaScript  |             | Perl   |   |        ---------    |
+|       |   | etc.        |             | Python |   |                     |
+|       |   ---------------             ----------   |                     |
+|       |____________________________________________|                     |
+----------------------------------------------------------------------------
+
+First, we have our Linux operating system: CentOS7. This will act as the base for our web 
+server by running the AMP part of our LAMP stack. The main program that will run on our 
+CentOS is the Apache web server. This will be the backbone of our server as Apache is what
+will actually serve our web pages to clients. Like above, when someone wants to visit our
+website, their web browser will connect to our CentOS server through Apache. The webpages 
+that you will serve up will most likely in be coded with some combination of PHP, HTML, CSS,
+JavaScript, or other web coding technologies. Generally, HTML, CSS, JavaScript, etc., will 
+handle how the web page looks. Whereas, PHP, Perl, or Python will be responsible for producing 
+dynamic web content or content that changes the page, like comments and other database information.
+So if you have a web page that needs to return data to the client, the PHP/Perl/Python embedded 
+on that page will be used to access the database. Simply put, PHP/Python/Perl handle the data on 
+the web page and HTML, CSS, JavaScript handle how that data looks and will be presented to the 
+users. Here, our database will be MySQL/MariaDB and is what will store all the user information.
+

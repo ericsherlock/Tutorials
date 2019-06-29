@@ -1,0 +1,11 @@
+Let's begin.
+
+First, let's do a simple Nikto scan of our CENTOS server and examine the results.
+
+The command we will be using is:
+				nikto -h 192.168.1.160
+
+Command Walkthrough: 
+                   nikto --> main command
+                   -host --> Host(s) to target
+                   192.168.1.160 --> Our CENTOS 7 web server 

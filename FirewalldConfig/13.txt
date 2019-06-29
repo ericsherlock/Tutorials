@@ -1,0 +1,41 @@
+
+The last piece of IPTables we need are the rules for each individual 
+chain that is associated with a table. Rules decide what to do with
+each individual packet. Each rule has an action associated with it:
+
+		--> ACCEPT : Allow packet into server
+		--> REJECT : Incoming packet is droppped and a rejection 
+                             message is sent to the packet source.
+		--> DROP   : Incoming packet is dropped and a rejection
+                             message is NOT sent to the packet source.  
+
+The overall structure is as follows:
+
+|----TABLES---|----CHAINS----|----RULES------|
+
+    Filter   --> INPUT       --> Input Rules
+             --> FORWARD     --> Forward Rules
+             --> OUTPUT      --> Output Rules
+---------------------------------------------------------------------
+    NAT      --> PREROUTING  --> Prerouting Rules
+             --> OUTPUT      --> Output Rules
+             --> POSTROUTING --> Postrouting Rules
+--------------------------------------------------------------------
+    Mangle   --> INPUT       --> Input Rules 
+             --> FORWARD     --> Forward Rules
+             --> PREROUTING  --> Prerouting Rules
+             --> OUTPUT      --> Output Rules
+             --> POSTROUTING --> Postrouting Rules
+--------------------------------------------------------------------
+    Raw      --> PREROUTING  --> Prerouting Rules
+             --> OUTPUT      --> Output Rules
+-------------------------------------------------------------------
+    Security --> INPUT       --> Input Rules
+             --> FORWARD     --> Forward Rules
+             --> OUTPUT      --> Output RUles
+
+
+Now that we have a good idea of the structure of IPTables, we can
+begin defining some rules to configure IPTables.
+
+

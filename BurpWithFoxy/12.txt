@@ -1,0 +1,17 @@
+To import the BurpSuite CA Certificate into Firefox complete the following:
+
+	--> In Firefox, Open the 'Preferences' Menu and navigate to the 'Privacy & Security' section
+
+	--> Scroll to the bottom of the page and find the 'Certificates' section and navigate to 'View Certificates'
+
+	--> The Certificate Manager window will appear, click the 'Import' button below the list of certificates
+
+	--> A window will open allowing you to import a certificate. Find and select the '.der' file we just downloaded 
+
+	--> A popup will appear, click the checkbox that reads 'Trust this CA to identify websites'
+
+	--> Click 'OK' in the popup and you should be returned to the 'Certificate Manager' page
+		Note: Now if you scroll down in the list of certificates, you should be able to see 
+			  a certifiate named 'PortSwigger' which is the company that developes BurpSuite.
+
+	--> Click 'OK' in the 'Certificate Manager' window

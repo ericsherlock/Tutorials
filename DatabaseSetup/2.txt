@@ -1,0 +1,26 @@
+
+On the screen there are three terminals. The top right is an SSH connection to the CentOS 7 VM that we 
+set up in my last video "Installing LAMP on CentOS 7" (Link in description). The bottom right is a 
+terminal that shows all the commands I'll be using to create and fill my example database. Whereas, the 
+current window will show formal command syntax and command explanations.
+
+Let's start by installing MariaDB: 
+
+			sudo yum install mariadb-server
+
+Once It's finished installing we can check the status with:
+
+			sudo systemctl status mariadb
+
+It should not be running, so we can start it wtih:
+	
+			sudo systemctl start mariadb
+
+If we want it to continue to run through reboots, we will need to enable the service with:
+
+			sudo systemctl enable mariadb
+
+Now we can go over some basic configuration options by running the following: 
+
+			sudo mysql_secure_installation
+

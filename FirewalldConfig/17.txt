@@ -1,0 +1,41 @@
+**Note: The following rules preceeded by (*) will need to be used to allow the outgoing traffic 
+	IF you have NOT set your OUTPUT default policty to allow ESTABLISHED connections (seen previously)
+-----------------------------------------------------------------------------------------------------------
+Allow HTTP/HTTPS:
+
+--> HTTP
+	sudo iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+	(*) sudo iptables -A OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+
+--> HTTPS
+	sudo iptables -A INPUT -p tcp --dport 443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+	(*) sudo iptables -A OUTPUT -p tcp --sport 443 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+ 
+-----------------------------------------------------------------------------------------------------------
+ALLOW SMTP:
+
+	sudo iptables -A INPUT -p tcp --dport 25 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+	(*) sudo iptables -A OUTPUT -p tcp --sport 25 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+
+-----------------------------------------------------------------------------------------------------------
+Accept/Block an IP Address:
+
+--> ACCEPT:
+	sudo iptables -A INPUT -s 'IP_ADDR' -j ACCEPT
+
+--> BLOCK:
+	sudo iptables -A INPUT -s 'IP_ADDR' -j DROP 
+
+-----------------------------------------------------------------------------------------------------------
+To delete certain rules, you will first want list the rules, then specify the rule number to delete.
+
+-->List rules:
+		sudo iptables -L --line-numbers
+-->Delete rule
+		sudo iptables -D 'CHAIN' 'NUMBER'
+-->Delete (Flush) ALL Rules:
+		sudo iptables -F
+
+-----------------------------------------------------------------------------------------------------------
+
+Next, we'll show how to save a firewall configuration.

@@ -1,0 +1,7 @@
+It worked! We can see that entering the script into the name field was able to return the user cookies. 
+
+If we look in the database, we can see our script has been stripped of the inner script tags, leaving a valid script.
+
+Now each time someone visits the page, the comments will be requested and the script will be run. 
+
+This can be dangerous because the inserted scripts can return information to remote systems without anyone knowing. 

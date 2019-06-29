@@ -1,0 +1,41 @@
+
+Next, we will install our database: MariaDB. You can use the following command:
+
+			sudo yum install mariadb-server
+
+Once it's finished installing we can check the status with:
+
+			sudo systemctl status mariadb
+
+It should not be running, so we can start it with:
+			
+			sudo systemctl start mariadb
+
+Let's check the status again to make sure it has been started.
+If we want it to continue to run through reboots, we will need to enable the service with:
+
+			sudo systemctl enable mariadb
+
+Now we can go over some basic configuration options by running the following:
+
+			sudo mysql_secure_installation
+
+This will have you step through some different prompts. You can set your own preferences
+Or you can follow along with me. Because this is for demonstration purposes I will not be 
+setting a password. 
+
+--> Enter current password for root (enter for none): your_password_here
+--> Set root password? [Y/n] 'y' if you set a password in last step, 'n' otherwise
+--> Remove anonymous users? [Y/n] y
+--> Disallow root login remotely? [Y/n] y
+--> Remove test database and access to it? [Y/n] y
+--> Reload privilege tables now? [Y/n] y
+
+We can now access MariaDB from the command line with the following command:
+
+			sudo mysql -u root -p
+
+**NOTE: Because MariaDB is an open-source fork of MySQL, it provides an SQL 
+interface for accessing the data within the MariaDB databases. As a result,
+MySQL commands are still used in multiple instances when using MariaDB.
+

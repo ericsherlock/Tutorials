@@ -1,0 +1,25 @@
+
+Now we can begin adding data into our database tables. To insert data into a table, the command is as 
+follows: 
+
+		INSERT INTO tablename (field1, field2,...) VALUES (value1, value2, ....)
+
+Similarly, To delete data from a table:
+
+		DELETE FROM table_name [WHERE...] column_name = column_value
+
+It should be noted that this command will delete the entire row that the column-value was located.
+
+To get information on particular row:
+
+		SELECT field, field2,... FROM table_name, table_name2,... WHERE column_name = column_value
+
+These are the 3 main commands that you will need to fill and manage your database. There are more
+intricate queries that can allow you to fine-grain any operations your looking to complete. Moreover,
+there are multiple resources that go much further in depth, here are some good ones online:
+(Links also in description) 
+
+		https://mariadb.com/kb/en/library/training-tutorials/
+		https://www.tutorialspoint.com/mariadb/index.htm
+		https://www.techonthenet.com/mariadb/index.php
+

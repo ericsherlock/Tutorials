@@ -1,0 +1,18 @@
+
+**NOTE: If you want to learn more about what these firewall commands are doing you can
+watch my other video 'Installing and Configuring Firewalld' on YouTube here:
+
+				https://www.youtube.com/watch?v=n0-QCzw31Qs
+
+Which describes in-depth how Firewalld works and how to configure it on Red Hat 
+Enterprise systems.
+
+Now back on our LAMP stack, you can test your Apache installation by opening a web 
+browser and typing your server IP into the URL bar. If set up correctly, you should 
+see an apache test page. For me, I'll navigate to http://192.168.1.119   Where you 
+will replace my IP with the IP of your server.  
+
+If you are able to see the apache test web page, then you have successfully installed
+the apache web server.
+
+Let's move on to the next component of the LAMP stack: MariaDB.

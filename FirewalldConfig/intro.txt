@@ -1,0 +1,10 @@
+
+Hey, Everyone.
+
+Today I'll be covering how to install and configure Firewalld.
+
+First, I'll go over some background information on firewalls. Once we have a
+good idea about what a firewall does, I'll introduce Firewalld and demonstrate
+how to install and configure it on a Fedora operating system.
+
+

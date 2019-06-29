@@ -1,0 +1,17 @@
+Now that we have learned how to install and configure Firewalld, we
+can start on doing the same for IPTables. 
+
+According to the IPTables man page: 
+
+			IPTables/IP6Tables is an administration tool for IPv4 and IPv6
+			packet filtering and network address translation (NAT).
+
+To install IPTables, we can use the standard repositories
+(Parrot OS Terminal is Bottom window to the left):
+
+			sudo apt install iptables
+
+Once it's finished installing, we can list all the current IPTable rules:
+
+			sudo iptables -L
+

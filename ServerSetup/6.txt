@@ -1,0 +1,39 @@
+
+Our last step will be to install PHP. According to the PHP manual (www.php.net/manual)
+PHP is an open source general-purpose scripting language that is especially suited for
+web developemnt and can be embedded into HTML. 
+
+PHP is generally focused as a server-side scripting language but can also be used for 
+command line scripting and regular desktop applications and can be used on a wide variety 
+of operating systems. 
+
+For our purposes, we will mainly use PHP to do back-end work like accessing the database.
+
+To install PHP, you can run the following:
+
+			sudo yum install php php-mysql
+
+You can also install a number of libraries that can provide specialized development tools,
+frameworks, and APIs. You can list them with the following:
+
+			sudo yum search php-
+
+You can test PHP by creating a small info.php script. Add the following code into a
+file in /var/www/html/info.php: 
+
+<?php
+phpinfo();
+?>
+
+Before we can test our PHP installation. We need to restart httpd so that Apache can 
+be made aware of the recent addition of PHP. We can do this with:
+
+			sudo systemctl restart httpd
+
+You can open a web browser and navigate to your PHP script at your server's IP address. 
+So for me, it will be  http://192.168.1.119/info.php   For you it will look like:
+
+				http://your_server_ip/info.php
+
+If you see a PHP info screen, you have succesfully installed PHP on your server. 
+

@@ -1,0 +1,41 @@
+Now, we can begin covering how to configure Firewalld
+
+To simply list all the currently defined zones, we can use:
+
+			sudo firewall-cmd --get-zones
+------------------------------------------------------------------------------------------
+To determine which zones are currrently active we can use:
+
+			sudo firewall-cmd --get-active-zones
+------------------------------------------------------------------------------------------
+Further, to see all the information associated for active zones we can use:
+
+			sudo firewall-cmd --list-all
+-----------------------------------------------------------------------------------------
+To list all the predefined services that are available:
+
+			sudo firewall-cmd --get-services
+-----------------------------------------------------------------------------------------
+The syntax to add a service to the current default zone is: 
+
+			sudo firewall-cmd --add-service="SERVICE"
+-----------------------------------------------------------------------------------------
+To add a service to a particular zone, the syntax is as follows:
+
+			sudo firewall-cmd --zone="DEFINED_ZONE" --add-service="SERVICE"
+
+-----------------------------------------------------------------------------------------
+If you want to add an open port for a service that isn't 
+a firewalld preset service you can use:
+
+			sudo firewall-cmd --add-port='PORT#/tcp'
+-----------------------------------------------------------------------------------------
+Similarly, if you want to remove a service or port:
+
+			sudo firewall-cmd --remove-service='SERVICE'
+
+					or
+
+			sudo firewall-cmd --remove-port='PORT#/tcp' 
+
+To make any of these changes permanent add the '--permanent' option. Let's do an example.

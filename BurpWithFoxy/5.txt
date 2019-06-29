@@ -1,0 +1,12 @@
+First, we will download the FoxyProxy addon within Firefox.
+You can find the download page here: 
+	
+			https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/?src=search
+
+Note: This download is for FoxyProxy Standard. There is also a FoxyProxy Basic download in the
+Firefox addon list that will also work but comes preinstalled with less configuration options.
+
+A popup will appear asking if FoxyProxy has permission to access browser information. Click
+'Add' and allow FoxyProxy to finish installing.
+
+

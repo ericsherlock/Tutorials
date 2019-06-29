@@ -1,0 +1,38 @@
+
+Now that we know what our goal here is we can begin installing our LAMP stack. 
+
+**NOTE: Generally, one of the first things you should do with a clean install of
+	any Linux operating system is install any updates that may be available. This 
+	process can take a few minutes, so I did this previously to save some time.
+	You can update with the following command:
+
+			sudo yum update
+
+
+First, let's install apache:
+
+			sudo yum install httpd
+
+Once it's installed, you can check its status with:
+	
+			sudo systemctl status httpd
+
+Because it's a new install, it should not be running. We can start it with:
+
+			sudo service httpd start
+
+Now if we check the status again, Apache should be active. Although this won't be persistant.
+If we want it to continue to run through reboots, we will need to enable the service with:
+
+			sudo systemctl enable httpd
+
+One thing to note is that CentOS 7 comes with Firewalld enabled. This means before we can 
+see the test page for our Apache server, we need to allow access to the HTTP service in 
+the public zone of our firewall. We can do this with the following command:
+
+			sudo firewall-cmd --permanent --zone=public --add-service=http
+
+Let's reload the firewall for the changes to take effect.
+
+			sudo firewall-cmd --reload
+

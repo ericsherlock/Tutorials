@@ -1,0 +1,25 @@
+
+If the firewall is not running we can start it with the following command:
+
+			sudo systemctl start firewalld
+
+**Note that starting Firewalld only runs Firewalld for for the current session, 
+to have Firewalld run persistantly between reboots, we need to enable the
+system service.
+------------------------------------------------------------------------------------
+We can enable the Firewalld system service with:
+
+			sudo systemctl enable firewalld
+------------------------------------------------------------------------------------
+If you need to stop Firewalld, the command looks like:
+
+			sudo systemctl stop firewalld
+------------------------------------------------------------------------------------
+Or to disable firewalld:
+
+			sudo systemctl disable firewalld
+-----------------------------------------------------------------------------------
+Finally, we can get the current status of the Firewalld service with:
+
+			sudo systemctl status firewalld
+

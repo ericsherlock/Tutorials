@@ -1,0 +1,29 @@
+
+The structure of IPTables begins with tables, then is further divided into 
+chains, and finally rules within each chain. To begin, let's describe what
+tables and chains are. 
+
+Generally, there are four different tables associated with IPTables firewall. 
+The tables are defined as follows: 
+
+		--> Filter Table: Handles all packet filtering for the firewall.
+-------------------------------------------------------------------------------------
+		--> NAT Table: Used for network address translation
+-------------------------------------------------------------------------------------
+		--> Mangle Table: Packets that are modified based on the rules in
+				  the NAT Table.
+-------------------------------------------------------------------------------------
+		--> Raw Table: Prevents network packets from connection tracking;
+			       which stores information about incoming connections.
+			       This is also used mainly for NAT and also virtualizations.
+------------------------------------------------------------------------------------
+
+**Note there is also a 'Security Table' for systems that have SELinux installed.
+It is used with the filter table to filter network packets based on MAC rules.
+Although since we are configuring IPTables on Debian, we will not be needing this. 
+
+Although there are four different tables associated with IPTables, generally the main 
+table you will need to configure is the 'filter' table. This is because most basic 
+firewalls act as a packet filter, where the 'nat', 'mangle' and 'raw' tables deal with 
+network address translation rather than packet filtering. 
+

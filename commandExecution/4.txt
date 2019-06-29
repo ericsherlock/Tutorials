@@ -1,0 +1,1 @@
+It worked! Now let's try to make a directory in /root called 'hacking' to put all our new data for later download. Looking at the shell above, you will see the /root directory with only the standard files.

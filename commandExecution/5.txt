@@ -1,0 +1,1 @@
+It didn't work. Running 'whoami', we can see this is becuase on the web server we are running as apache, who doesn't have the privileges to create directories. But suppose we managed to get the admin password, we can now craft a command that allows us to create a directories anywhere.

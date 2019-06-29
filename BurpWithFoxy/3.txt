@@ -1,0 +1,12 @@
+To help illustrate, I'll use a scene from the popular movie Goodfellas. In one of the openeing scenes
+the main character Henry Hill explains how Paulie feels about phones: 
+
+"Paulie hated phones. He wouldn't have one in his house. He used to get all his calls second hand,
+then you'd have to call the people back from an outside phone. There were guys, that's all they did
+all day long was take care of Paulie's phone calls."
+
+In this scenario, Paulie is the internal user and the phone calls he gets are internet traffic. Here,
+the guys that Paulie continously has take his calls are the server proxies. They simply relay all
+information between Paulie and the outside world.
+
+ 

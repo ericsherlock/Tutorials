@@ -1,0 +1,9 @@
+The next thing we need to do is determine if the website is vulnerable to SQLi attacks.
+
+We can test this by intercepting a request from the website to the database. On our site we can see a dropdown menu for 'User ID' number and a 'Submit' button. Pick any user ID and click 'Submit'.
+
+Looking at the request we can see the SQL statement on the last line. We can test if the site is vulnerable to SQLi by adding a single quote directly after "id=1" part of the SQL statement within the request and clicking 'Forward' in BurpSuite. 
+
+If the inclusion of a single quotation mark causes an error in the application, this means the query is already closed as part of the underlying code. So an extra single quote will cause the application to throw an error becuause the SQL syntax will be incorrect. 
+
+We can see that this did throw an error stating that the SQL syntax is incorrect. So we now know that this application is vulnerable to SQLi!

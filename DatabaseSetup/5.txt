@@ -1,0 +1,43 @@
+
+Now, we can begin creating our database. If you haven't already, sign into MariaDB with the following:
+
+			mysql -u root -p
+
+To create the initial database use:
+
+			CREATE DATABASE your_db_name;
+
+You can create your own database or you can follow along with my example database commands in the bottom 
+right terminal. For the purposes of this video, I'll be focusing my database around Avengers movies. So 
+I'll call my database 'movies'. It will have 3 tables. A movie_info table to hold the title, director,
+and release year. A movie_stats table to hold the title, earnings, and runtime. Lastly, a movie_quotes
+table to hold the title, movie quote, and actor who said the quote. 
+
+Now you'll want to create tables for your database. Tables are the structures that hold and 
+organize your data into rows and columns within a database. Each column will represent a different 
+piece of data you are storing and its corresponding datatype.
+
+If you haven't already, move into your newly created database with:
+
+			use your_db_name;
+
+To create a table, the following command is used: 
+
+			CREATE TABLE your_table_name (column-name1 column-type1, column-name2 column-type2,...);
+
+In order to add a Primary Key to this table, simply add the primary key option in the CREATE command like so: 
+		
+			CREATE TABLE your_table_name (column-name1 column-type1, column-name2 column-type2,...)
+				constraint [constraint-name] PRIMARY KEY (column1, column2,...);
+
+The same command syntax is used to add foreign keys as well: 
+	
+			CREATE TABLE your_table_name (column-name1 column-type1, column-name2 column-type2, ...)
+				CONSTRAINT [constraint-name] FOREIGN KEY (column1, column2,...) 
+				REFERENCES your_table_name (primary_key_column);
+
+Similarly, to drop or delete a table you can use: 
+			
+			DROP TABLE your_table_name;
+
+

@@ -1,0 +1,5 @@
+The goal here is to store an script on the web server that will be executed each time a particular page is visited. For this example, we will insert a script as a user comment. Then when the server presents those comments, the script will be processed run automatically.  
+
+Let's try to insert a small script into the 'Message' field that returns the user's cookie. The script will look like:
+
+				<script>alert(document.cookie)</script>

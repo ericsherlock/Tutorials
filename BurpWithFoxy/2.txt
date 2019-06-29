@@ -1,0 +1,10 @@
+Accoring to the FoxyProxy FAQ page (https://help.getfoxyproxy.org/index.php/knowledge-base/foxyproxy-faq) 
+"FoxyProxy is a Firefox extension which automatically switches an internet connection across one or more 
+proxy servers based on URL patterns. Simply put, FoxyProxy automates the manual process of editing Firefox's 
+Connection Settings dialog."
+
+In general a proxy server is a gateway between a user and the internet. Using a proxy server can provide 
+privacy and security by shielding internal users from external sources by forcing traffic through
+a middle man. 
+
+

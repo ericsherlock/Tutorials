@@ -1,0 +1,11 @@
+Next, let's turn off intercept mode in BurpSuite by toggling the 'Intercept is ..." button to 'Intercept is off'.
+
+This will automatically allow the current requests to continue to their destination, changing the password. If you don't want to change the password, simply press 'Drop' in Burpsuite until there are no packets left to drop.
+
+Now that we have a malicious request that allows us to change the victim's password to our own, we need to embed the request into a link hat we can trick the victim into clicking on.
+
+For this example I have a pre-built html login page to use as our attackers malicious website. I have already added the malicious request into each link on the page. You can see the code above that shows the request within the 'href' fields of each of the possible clickable items on the page.
+
+The goal here will be to get the victim to interact with the infected login page.
+
+

@@ -1,0 +1,1 @@
+Now, looking at the source code above, we can see that the shell_exec() lines execute the ping command of $target. The code is vulnerable because the $target variable is never checked before being run. So the attacker can string system commands on the end of the IP address.

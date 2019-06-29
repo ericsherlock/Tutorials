@@ -1,0 +1,7 @@
+Hey, Everyone!
+
+In this video we will be demonstrating a cross-site scripting vulnerability using DVWA. We will be going over both the low level and medium level XSS vulnerability. 
+
+For some background, a cross-site scripting (XSS) attack is when attackers inject malicious scripts into an otherwise innocuous site to be executed in the user's browser. There are 2 main types of XSS attack, 'stored' and 'reflective'.
+
+Stored XSS attack is when the malicious script is stored on the web server and executed when a user visits that page. Reflective XSS are created by sending requests with the XSS attack itself.

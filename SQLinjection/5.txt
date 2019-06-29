@@ -1,0 +1,12 @@
+Let's try to print information about the database. If we know the database names, fields, etc., we can better craft future queries to return what we want.
+
+Quickly toggle the 'Intercept is ...' button to 'Intercept is Off' then again to 'Intercept is On'. This will clear any built up requests that were stopped since our last capture. 
+
+Now click the 'Submit' button with any 'User ID' chosen. With the captured packet insert the following directly after the 'id=1': or 1=1 union select null, table_name from information_schema.tables# 
+
+Now in BurpSuite click 'Forward' to let the packet continue to its destination. 
+
+This will craft a statement looking like:
+	SELECT first_name, last_name FROM users Where user_id = 1 or 1=1 UNION SELECT null, table_name FROM information_schema.tables
+
+It's important to recognize that in a real world scenario we won't actually know how the database labels 'first_name', 'last_name' fields or that there is a table called 'users'. These are set in the source code for the website and shouldn't be viewable to the public. I'm adding them for demonstration purposes. 

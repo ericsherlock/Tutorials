@@ -1,0 +1,12 @@
+Go back to the 'Intercept' tab to the left. 
+
+Now, open a Firefox tab to a website. I'll use Google. (If you haven't turned it off already,
+Make sure the 'Intercept is off' button is set to 'Intercept is off' in BurpSuite.) 
+
+In your Firefox window, go to the FoxyProxy icon and click on it so that it shows you a list of options.
+Click on the proxy option you set up earlier. I named the proxy 'Burp' so I'll click on the 
+'Use proxy Burp for all URLs (ignore patters)'. 
+
+Also go back to BurpSuite and turn the 'Intercept is off' to 'Intercept is on'. 
+
+

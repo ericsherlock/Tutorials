@@ -1,0 +1,10 @@
+There are plenty of places (including FoxyProxy) that offer paid / free proxy services. The paid services
+are generally more reliable and secure. Whereas the free versions can often be slow and insecure due 
+to high amounts of traffic.
+
+We will be using BurpSuite as our proxy server. Making all traffic go through Burp before going 
+to the internet.
+
+Now that we know what a server proxy does and what we will be using, Let's begin.
+
+

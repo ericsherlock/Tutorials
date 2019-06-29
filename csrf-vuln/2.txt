@@ -1,0 +1,9 @@
+Let's look at the code we will be attempting to exploit. 
+
+In the DVWA source code for the CSRF vulnerability (shown above), we can see that when a user attempts to change their password, the first thing the server does is check that the referer of the request is the same as the DVWA server. 
+
+To put this into context of our banking example, this is the same as the bank making sure that any request sent from this page originates on the bank's own server and not some outside server. 
+
+The next check is to make sure the new user password is the same as the confirmation password. 
+
+These are the only 2 checks that are performed before the request is processed by the server database. Let's start.

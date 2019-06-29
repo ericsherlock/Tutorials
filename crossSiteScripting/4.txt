@@ -1,0 +1,10 @@
+**I am going to delete the Cookie script comment from the database so we won't keep getting an alert.** (Shown above)
+
+Now, let's suppose we found another page with 'Medium' security. 
+
+If we look at the source code for the comment boxes we can see that the 'Message' field is now sanitized with 'strip_tags()', which removes any HTML and PHP tags from a line. 
+
+But if we look at the 'Name' field we can see the only sanitization is a relacement of the '<script>' tag. So what we can do is embed a script tag within another script tag:
+			<scr<script>ipt></script>
+
+This will be able to pass through to the database because when the inner script tag is removed, the resulting string will be valid opening and closing script tags. Allowing us to put a valid script inside.  

@@ -1,0 +1,17 @@
+Now, navigate back to the 'Intercept' Tab in BurpSuite and turn 'Intercept is off' to 'Intercept is on'
+
+You should now be able to intercept traffic successfully. 
+
+To return normal traffic flow, simply click again on the FoxyProxy icon and choose
+'Turn off FoxyProxy (Use Firefox Settings)'. Also make sure to turn 'Intercept is on' 
+to 'Intercept is off' in BurpSuite.  
+
+You have successfully configured FoxyProxy with BurpSuite!
+
+Now if you ever need to intercept internet traffic through BurpSuite, all you need to do is 
+toggle the FoxyProxy options to point toward your Burp proxy. 
+
+That's it for now.
+
+Thanks for watching.
+

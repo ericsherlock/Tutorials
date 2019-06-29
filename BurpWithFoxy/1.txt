@@ -1,0 +1,13 @@
+For penetration testers, BurpSuite (or OWASP ZAP) is a must have tool for any security testing job. It is an 
+interception proxy that has the ability to inspect and modify traffic, scan applications for vulnerabilities, 
+write your own plugins, and much more. BurpSuite acts an an intermediary for all traffic between a penetration
+tester and the application they're testing.
+
+It has both a paid and free version that can be downloaded here: https://portswigger.net/burp
+
+One task that quickly becomes a nuisance when security testing is continuously having to re-configure the 
+Firefox Network Proxy to route traffic through BurpSuite.
+
+This is where FoxyProxy comes in.
+
+

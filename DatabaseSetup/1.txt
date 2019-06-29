@@ -1,0 +1,19 @@
+
+First, let's go over some background information on relational databases and MariaDB. 
+
+A database is a structured collection of data stored for use by one or more applications. A relational database 
+enables the creation of multiple tables tied together by a unique identifier that is present in all tables. The 
+building block of a relational database is a table of data, consisting of rows and columns. Each column holds a
+particular type of data in which each row contains a specific value for each column.  
+
+MariaDB is an open source relational database management system that is rooted in MySQL. MySQL AB was a Swedish
+company that was acquired by Sun Microsystems in 2008 and subsequently by Oracle in 2010. The MySQL development
+team wanted to maintain an open source version of the popoular database system but Oracle wanted to create a 
+commercial database system for enterprise (which became Oracle Database Server).
+
+As a result a number of MySQL engineers who still wanted an open-source alternative then decided to create a 
+fork of MySQL and created MariaDB which remains free and open source software under the GNU General Public 
+License.  
+
+Now that we have some background information let's begin with installation and configuration.  
+

@@ -1,0 +1,15 @@
+Looking more closely, we can see that Nikto made 8,000+ requests to our web server. 
+As previously stated, Nikto is not a quiet tool. So let's look at the log files on 
+our vulnerable server (open through SSH connection) and see what was logged.
+
+The log files that handle http access requests are located in /var/log/httpd directory.
+ More specifically, in the access_log files. 
+
+We can print out the end of our access_log file using the command:
+                                    
+				 tail -100 /var/log/httpd/access_log
+
+It is clear that our Nikto scan has a considerable footprint. Along with the thousands 
+of GET/POST requests, we can see that each request came from our ParrotOS's IP address 
+and that we are using Nikto to send these requests (again, Nikto is not a quite tool 
+and should only be run against machines you have proper authorization to scan). 

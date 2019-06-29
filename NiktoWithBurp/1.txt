@@ -1,0 +1,10 @@
+Nikto can be a useful tool for both system administrators trying to patch possible vulnerabilities
+and for penetration testers searching for those vulnerabilities.   
+
+Nikto works by making continuous requests to a web server and evaluating the responses it receives.   
+
+Please note: ***************NIKTO IS NOT A STEALTHY TOOL!************************
+
+As we will see, scanning with Nikto leaves an extensive log-trail. This could be a problem for 
+penetration testers who need to maintain anonymity in their operations. Later in the video
+we will see how we can mitigate the chances of being detected. 

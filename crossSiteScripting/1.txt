@@ -1,0 +1,5 @@
+For this example, let's suppose we have found a banking site (DVWA) that we want to exploit with cross-site scripting. More specifically, we will attempt a stored XSS attack.
+
+Let's suppose the first page we want to exploit has 'Low' security. 
+
+If we look at the source code for this page above, we can see that the only sanitization that is done on the 'Message' field is a 'stripslashes()' method. If we look this up, we learn that 'stripslashes()' returns a string with backslashes stripped off.  

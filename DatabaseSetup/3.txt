@@ -1,0 +1,23 @@
+
+This will have you step through some different prompts. You can set your own preferences or you can 
+follow along with me. 
+
+--> Enter current password for root (enter for none): your_password_here
+--> Set root password? [Y/n] 'y' if you set a password in last step, 'n' otherwise
+--> Remove anonymous users? [Y/n] y
+--> Disallow root login remotely? [Y/n] y
+--> Remove test database and access to it? [Y/n] y
+--> Reload privilege tables now? [Y/n] y
+
+We can now access MariaDB from the command line with the following command:
+
+			sudo mysql -u root -p
+
+**NOTE: Because MariaDB is an open-source fork of MySQL, it provides an SQL 
+interface for accessing the data within the MariaDB databases. As a result,
+MySQL commands are still used in multiple instances when using MariaDB. 
+
+Now, before continuing we should cover the primary and foreign keys concepts. This 
+is because when we create a table we'll need to add options to our commands to 
+incorperate primary/foreign keys into our database.
+

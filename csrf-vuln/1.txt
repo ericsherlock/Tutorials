@@ -1,0 +1,5 @@
+Let's suppose an attacker wants to gain access to a victim's online bank account. To do this they want to use CSRF to change the victim's password to their own. 
+
+The attacker needs to obtain a password changing request between a legitimate user and the bank (We'll demonstrate this here). Then the attacker can craft their own malicious request and trick victims into sending it to their bank while the victim browser is authenticated.  
+
+Here, We'll use BurpSuite to intercept a password changing request. Then we'll alter the request and embed it in a link. From there, we can get a legitimate user who is currently signed into the banking system to interact with the malicious link. This will send the malicious request to the banking system, changing the victim's password. 

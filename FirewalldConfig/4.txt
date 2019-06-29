@@ -1,0 +1,16 @@
+Now that we have some background information on Firewalld we can start 
+with installation and configuration. In no particular order, we'll walk 
+over how to do things like:
+			--> Install firewalld package
+			--> Enable system services
+			--> Add / Remove Ports and Services
+			--> Configure zones
+
+To begin let's install the Firewalld package (window to the right):
+
+		sudo dnf install firewalld
+
+Once it is finished installing, we can check the state of the firewall with:
+
+		sudo firewall-cmd --state
+

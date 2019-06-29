@@ -1,0 +1,45 @@
+Login:
+	mysql -u root -p
+
+Create Movie Database:
+
+	create database movies;
+
+Use Database:
+
+	use movies;
+
+create tables:
+
+	create table movie_info (title VARCHAR(255) NOT NULL, director VARCHAR(255) NOT NULL, year INT, PRIMARY KEY (title));
+	create table movie_stats (title VARCHAR(255) NOT NULL, earnings INT, runtime INT, FOREIGN KEY (title) REFERENCES movie_info (title));
+	create table movie_quotes (title VARCHAR(255) NOT NULL, quote VARCHAR(255), actor VARCHAR(255), FOREIGN KEY (title) REFERENCES movie_info (title));
+
+Insert Commands:
+
+	INSERT INTO movie_info (title, director, year) 
+	VALUES 
+	('The Avengers', 'Joss Whedon', 2012), 
+	('Avengers: Age of Ultron', 'Joss Whedon', 2015),
+	('Avengers: Infinity War', 'Anthony and Joe Russo', 2018), 
+	('Avengers: Endgame', 'Anthony and Joe Russo', 2019);	
+
+
+	INSERT INTO movie_stats (title, earnings, runtime) 
+	VALUES
+	('The Avengers', 1151900000, 143),
+	('Avengers: Age of Ultron', 1405000000, 141),
+	('Avengers: Infinity War', 2048000000, 149),
+	('Avengers: Endgame', 2344000000, 181);
+
+	INSERT INTO movie_quotes (title, quote, actor) 
+	VALUES
+	('The Avengers', 'Doth mother know you weareth her drapes?', 'Robert Downey Jr.'),
+	('Avengers: Age of Ultron', 'The city is flying and we are fighting an army of robots. And I have a bow and arrow. Nothing makes sense.', 'Jeremy Renner'),
+	('Avengers: Infinity War', 'I have mastered the ability of standing so incredibly still that I become invisible to the eye.', 'Dave Bautista'),
+	('Avengers: Endgame', 'Avengers, Assemble!', 'Chris Evans');
+
+JOIN Commands:
+
+	select movie_stats.runtime, movie_info.year FROM movie_stats INNER JOIN movie_info on (movie_info.title = movie_stats.title);
+	select movie_info.director, movie_stats.earnings FROM movie_info INNER JOIN movie_stats on (movie_info.title = movie_stats.title);

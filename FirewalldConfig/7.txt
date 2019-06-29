@@ -1,0 +1,36 @@
+
+For example, the following opens basic ports/services that allow internet traffic
+(HTTP / HTTPS), email services (SMTP), and a way to connect with our server via SSH
+
+			sudo firewall-cmd --add-service=http
+			sudo firewall-cmd --add-service=https
+			sudo firewall-cmd --add-service=ssh
+			sudo firewall-cmd --add-service=smtp
+
+To make sure these have been added to the runtime configuration, view the services:
+
+			sudo firewall-cmd --list-services
+
+Now suppose we want to change the SSH port to something other than 22; say 1234.
+We can use the following commands:
+
+	--> Close / Remove current SSH port and service
+			sudo firewall-cmd --remove-service=ssh
+
+	--> Open new port for SSH to begin using 
+			sudo firewall-cmd --add-port=1234/tcp
+
+**Note, If you're trying to change the SSH port, make sure the same port
+is also open on the server you are trying to connect to. So if you change 
+your SSH port to 1234 on your machine, then port 1234 MUST be open on the
+computer you are trying to connect to.
+
+Let's also suppose we want to remove access to email services, you could use:
+
+			sudo firewall-cmd --remove-service=smtp
+
+Suppose you don't remember the service name but do remember the port number, you
+could also use the following to acheive the same result:
+
+			sudo firewall-cmd --remove-port=25/tcp
+

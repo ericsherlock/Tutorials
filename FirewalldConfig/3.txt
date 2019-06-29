@@ -1,0 +1,23 @@
+
+Now we can begin with Firewalld.
+
+According to the Firewalld man page: 
+		
+		Firewalld provides a dynamically managed firewall with support for 
+		network/firewall zones to define the trust level of network connections 
+		or interfaces.
+
+Here, a 'zone' refers to a particular trust level of a network connection.
+Based on things like source IP or incoming network interface, traffic is 
+directed to the appropriate zone. Where each zone can have varying ports 
+open that allow different types of traffic depending on that traffic's trust level.
+
+Firewalld comes with pre-defined zones like dmz, internal, public,
+trusted, and external to name a few. Administrators can even define
+their own zones to suit their needs. 
+
+To get more information on zones and other configuration options refer to the 
+Firewalld documentation, here: 
+
+			--> https://firewalld.org/documentation 
+

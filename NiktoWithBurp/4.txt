@@ -1,0 +1,13 @@
+We can from the output that there were 10 vulnerabilities reported on our CENTOS server. 
+Examining the output to the right, we get information like:
+
+	--> Server Type : Apache / 2.4.6
+	--> Operating System : CENTOS
+	--> PHP Version: 5.4.16
+	--> Server leaks inodes via ETags
+	--> Apache/PHP appears to be outdated
+	--> HTTP METHODS : GET, HEAD, POST, OPTIONS, TRACE
+	--> HTTPD TRACE is active --> host vulnerable to XST
+	--> X-XSS-Protection header not defined --> host possibly vulnerable to XXS
+
+and more.

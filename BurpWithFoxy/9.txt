@@ -1,0 +1,18 @@
+We should see a set of our Proxy listeners.
+
+Like the description under 'Proxy Listeners' says, we need to configure our browser to use 
+one of the listeners as its proxy server.
+
+If you see an interface already running on localhost interface (127.0.0.1:8080) then we are done 
+and can go back to the 'Intercept' tab to the left. 
+
+If you do not see an interface already running, click on the 'Add' button next to the interfaces box.
+ This will bring up an 'Add a new proxy listener' window. 
+
+You should see a box with 'Bind to port: ' dialog next to it along with 'Bind to address' radio buttons.
+Enter the following: 
+
+--> Bind to port: 8080
+--> Bind to address: 'Loopback only'
+
+Click 'OK' in the bottom right. You should now see the localhost interface in your interfaces list.

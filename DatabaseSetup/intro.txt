@@ -1,0 +1,15 @@
+
+Hey Everyone!
+
+Today we will be going over how to install and configure MariaDB on Red Hat Enterprise's CentOS 7.
+
+For this video we'll be using the same virtual machine I set up in my last video 'Installing a LAMP 
+Stack on CentOS 7'. You can find the link to that video down below.
+
+To begin, I'll go over some background information on databases and the history of MariaDB. Then I'll 
+show how to install MariaDB and set up basic configuration options. Moreover, we'll cover how to do 
+database operations that you commonly see in practice. To finish, I'll go over primary and foreign 
+keys along with examples of how they work.  
+
+Let's begin!
+

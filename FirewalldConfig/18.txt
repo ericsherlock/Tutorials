@@ -1,0 +1,30 @@
+
+Now, if you have configured and tested a configuration you like you can run the following to
+ensure your configuration lasts between reboots.
+
+But first, it would be a good idea to now add a rule that drops or rejects all other traffic
+other then what's already been defined. This way, if there is a misconfiguration or hole in 
+your firewall, the traffic will be dropped.
+
+------------------------------------------------------------------------------------------------------
+Drop all traffic:
+
+	sudo intables -A INPUT -j DROP
+
+------------------------------------------------------------------------------------------------------
+Persistantly save your firewall configuration:
+
+	sudo /sbin/iptables-save
+
+**Note: You should run this each time there are changes made to the firewall, that way
+you won't unexpectedly lose any rules due to a random or scheduled reboot.
+
+------------------------------------------------------------------------------------------------------
+We covered only the beginnings of what Firewalld and IPTables can accomplish. 
+If you have any questions or concerns let me know in the comments section and 
+I'll answer as best I can.
+
+
+Thanks for watching!
+
+

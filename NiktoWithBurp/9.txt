@@ -1,0 +1,11 @@
+In this video we demonstrated the web server vulnerability scanner Nikto. 
+
+Nikto can be extremely useful for system administrators who need to find / fix any possible vulnerabilities.
+
+Likewise, it can be used by penetration testers to discover vulnerabilities on a web server.
+Although, with a large number of GET / POST requests, a Nikto scan is extensively logged on 
+the vulnerable server. To help mitigate this, you can route the Nikto traffic through a web proxy.
+
+That's it for now. 
+
+Thanks for watching!  

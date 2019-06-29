@@ -1,0 +1,15 @@
+
+Hey Everyone, 
+
+In this video we will be installing and configuring a LAMP (Linux, Apache, 
+MySQL, PHP) stack on a fresh install of CentOS 7.
+
+In the window to the right is an SSH connection to a brand new updated 
+install of of CentOS 7. The packages I have installed is the net-tools 
+package which installs some basic networking tools and the standard 
+VIM text editor. 
+
+First, we'll cover some background information on each of the services 
+above and how they work with each other. Then, we'll go over how to install
+each component onto a new install of CentOS 7. 
+

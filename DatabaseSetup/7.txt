@@ -1,0 +1,36 @@
+
+Now that we have some data. We can go over how to query data using our primary and foreign keys.
+First, we need to go over MariaDB "Joins". The three types of JOIN operations are: 
+	
+	1) INNER JOIN: Returns all rows from multiple tables where join condition is satisfied.
+
+		SELECT column_name
+		FROM table_name
+		INNER JOIN table_name2
+		ON table_name.column = table_name2.column
+	
+	2) LEFT OUTER JOIN: Return all rows from left-hand table specified in the ON condition
+		and only those rows from the other table where joined condition is satisfied.
+
+		SELECT column_name
+		FROM table_name
+		LEFT[OUTER] JOIN table_name2
+		ON table_name.column_name = table_name2.column_name;
+
+	3) RIGHT OUTER JOIN: Return all rows from  right-hand table specified in the ON condition
+		and only those rows from the other table where the joined fields are satisfied. 
+
+
+		SELECT column_name 
+		FROM table_name 
+		RIGHT[OUTER] JOIN table_name2 
+		ON table_name.column_name = table_name2.column_name;
+
+For example, suppose we have noticed super hero movies getting longer in recent years and we want
+to see if there is a correlation between release year and runtime. We can craft a statement using
+INNER JOIN to pull the runtime column and the year column from movie_stats and movie_info, 
+respectively. Let's also suppose we want to know if there is a correlation between the directors 
+chosen for the movies and total earnings. We can get this information with a similar statement. 
+
+For pratice, I'll leave it to you to come up with examples for LEFT OUTER JOIN and RIGHT OUTER JOIN
+based on your own tables. 

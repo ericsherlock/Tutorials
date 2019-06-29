@@ -1,0 +1,14 @@
+For the configuration options:
+
+	--> Title: is optional, so name it what ever you want (I'll name it Burp).
+	--> Proxy Type: HTTP
+	--> IP Address: 127.0.0.1
+	--> Port: 8080
+
+There is also an 'On/Off' slider that reads 'Do not use for localhost and intranet/private IP addresses'. 
+Make sure you slide this to 'Off'. We need this off because BurpSuite is running on our localhost and 
+we'll need our traffic to go through it.
+
+Press 'Save' below the input boxes to save the proxy settings.
+
+ 

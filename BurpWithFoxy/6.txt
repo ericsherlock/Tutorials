@@ -1,0 +1,13 @@
+When the install completes, you should see the FoxyProxy icon in the upper right corner of the 
+Firefox browser window. 
+
+If you click on the icon you will see a popup box that indicates FoxyProxy is off and using the 
+Firefox default network configuration settings reading "Turn off FoxyProxy (Use Firefox Settings)". 
+
+Click on the 'Options' button at the bottom of the popup window. The FoxyProxy configuration window will
+open, showing a list of options on the left hand side.
+
+To add a new proxy, click the 'Add' button in the top left. A new page will appear with the inputs 
+for your configuration options. 
+
+

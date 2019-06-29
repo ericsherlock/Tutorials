@@ -1,0 +1,9 @@
+
+You have now installed a LAMP stack on a CentOS 7 system!
+
+That's it for today. If you have any questions or concerns, 
+let me know in the comments section below. 
+
+
+Thanks for watching!
+

@@ -1,0 +1,25 @@
+The vulnerable web server we'll be scanning is a CENTOS 7 virtual machine (VM) installed with the 
+Damn Vulnerable Web Application (DVWA). 
+
+*****Note that I set up and own the VM that we will be scanning. If you plan on performing any 
+penetration testing operations on a server, you should either own the server or have 
+written permission by the owners to be perform any testing.*****
+
+The machine running the scan will be a ParrotOS virtual machine installed with Nikto and BurpSuite. 
+
+Here, ParrotOS (or Kali) comes with both Nikto and BurpSuite pre-installed.
+If you are not using ParrotOS or Kali, then you can install them using the 
+following commands (depending on which flavor Linux you are using):
+                                
+                Debian: 
+				--> Nikto:
+						 apt-get install nikto
+				--> BurpSuite:
+						apt-get install burpsuite
+					
+                RedHat:
+				--> Nikto:
+						dnf install nikto
+				--> BurpSuite: On RedHat Systems must be downloaded / installed from source: 
+
+								https://portswigger.net/burp/community/download

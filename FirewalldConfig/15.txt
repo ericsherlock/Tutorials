@@ -1,0 +1,29 @@
+
+As a last aside before defining our firewall rules, take careful
+note of the following:
+
+************Notes: Please pay particular attention**************
+
+		--> ORDER DOES MATTER: The order in which you append/insert 
+			your rules can determine the overall effectiveness of 
+			your firewall. This is becuase each rule determines how
+			to handle a particular type of packet. But if there is a 
+			packet that doesn't match with any rules, a "default"
+			rule is used for that packet. If your default rule is to 
+			accept (or reject) all packets, then any packet that doesn't
+			match a defined rule will automatically be accepted (or 
+			rejected). Which can quickly become a security concern.
+
+		--> MAKE SURE NOT TO LOCK YOURSELF OUT: It is easy
+			for those new to IPTables to lock themselves out 
+			of their own systems. It is common on initial setup
+			to see people first define a defult rule to block all 
+			traffic then add only a few rules for the traffic they
+			want to accept. Only to find out they mis-configured or
+			didn't test properly and are now locked out. So be careful
+			not to add default rules that block or deny traffic until 
+			you're ready. It's much easier to initally allow all 
+			traffic and simply insert a rule to deny all traffic once
+			you're finished defining your other rules. 
+
+

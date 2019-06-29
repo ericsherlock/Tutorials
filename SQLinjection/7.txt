@@ -1,0 +1,9 @@
+In order to show the user passwords, go back to BurpSuite and toggle the 'Intercept is...' button to 'Intercept is Off' then again to 'Intercept is On' to clear any builtup packets. Then click 'Submit' on our webpage with any 'User ID' chosen. 
+
+Enter the following after the 'id=1' piece of SQL: or 1=1 union select null, users.password from users#
+
+Then click 'Forward' in BurpSuite to move the request along...
+
+You can see in the output each of the users and their respective passwords!
+
+

@@ -1,0 +1,7 @@
+First, let's send a password changing request from our banking site (DVWA). 
+
+Now, we can see the intercepted request on our BurpSuite window.
+
+If we inspect the raw GET request, we can see that the new password and password confirmation are being set in clear text. A few lines below this, we can also see the referer, or the server that sends the request. 
+
+Let's copy the GET request AND the referer link from the captured request. When we copy the GET request, change the user password to our own password.

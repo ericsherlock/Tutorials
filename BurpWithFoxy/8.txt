@@ -1,0 +1,18 @@
+Now, we need to congfigure BurpSuite to intercept the traffic from the web browser. More specifically,
+we need to make sure that BurpSuite is configured to intercept the traffic that is coming from
+localhost. 
+
+Go ahead and open BurpSuite to a Temporary project. 
+
+Along the top you will see a series of tabs starting with 'Target', 'Proxy', 'Spider'..etc
+
+Navigate to the 'Proxy' tab. 
+
+Go ahead and click 'Intercept is on' Button to so that it reads 'Intercept is off'. 
+
+Just above this button you will see a subset of tabs starting with 'Intercept', 'HTTP history',
+'WebSockets history', and 'Options'. 
+
+Click on the 'Options' Tab. 
+
+

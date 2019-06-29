@@ -1,0 +1,4 @@
+In order for the whole script to fit inside the 'Name' field, we will need to change the max allowable number of characters for that input box. 
+
+Now, we can add the script that will return user cookies:
+			<scr<script>ipt>alert(document.cookie)</script>

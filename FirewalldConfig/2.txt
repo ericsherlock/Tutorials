@@ -1,0 +1,24 @@
+
+--> Host-Based: A firewall running on and protecting an individual host or server. 
+		This generally includes devices like laptops or single desktops 
+		you would find in a typical home.
+------------------------------------------------------------------------------------------
+--> Network-Based: A firewall protecting an entire network or subnet. You will 
+		   typically find these in office buildings or workplaces, 
+		   where there are many computers under a single umbrella. 
+------------------------------------------------------------------------------------------
+--> Software-Based: A firewall being run as an application (like spotify, 
+		    firefox, etc,.) including IPTables and Firewalld.
+------------------------------------------------------------------------------------------
+--> Hardware-Based: A firewall filter that is configured directly into the 
+		    firmware of network devices like routers or modems. 
+------------------------------------------------------------------------------------------
+--> Application-Layer Filter: A firewall that filters at the higher layers of the
+			      OSI reference model. Allows only certain applications
+			      access to/from the system.
+------------------------------------------------------------------------------------------
+--> Network-Layer Filter: A firewall that allows only certain packets into and out
+			  of the system and operates on the lower layers of 
+			  the OSI reference model. 
+
+

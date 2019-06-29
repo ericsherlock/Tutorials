@@ -1,0 +1,5 @@
+Let's suppose we have found a banking website (DVWA) that we want to exploit. We want to use SQL injection to obtain information about their database, along with any usernames and passwords available. 
+
+To do this, we first need to determine if the website is vulnerable to SQL injection attacks. If it is, then we can craft SQL query statements that can pull information from the database. 
+
+Let's begin.

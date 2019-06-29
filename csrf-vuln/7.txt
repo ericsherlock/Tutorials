@@ -1,0 +1,8 @@
+As we can see our request was sent through to the Bank's (DVWA) server. We also received a 'Password Changed' dialog.
+
+Thus, we have sent the attacker's malicious request to the victim's banking website, successfully changing the victim's password. 
+
+The banking site accepts the request because the user is still authenticated with the bank website on their browser.
+
+**Make sure to toggle the 'Intercept is...' button to 'Intercept is Off' and reset the Firefox preferences back to 'Auto-detect proxy settings for this network' to return to normal web traffic.**
+

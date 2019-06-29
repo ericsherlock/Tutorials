@@ -1,0 +1,1 @@
+If we test the input to the right, we will see it is able to ping an address successfully.

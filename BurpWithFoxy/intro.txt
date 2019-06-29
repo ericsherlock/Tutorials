@@ -1,0 +1,8 @@
+Hey everyone!
+
+Today I'll show you how to install and configure FoxyProxy with BurpSuite.
+
+We'll also be working with the Firefox web browser due to its widespread use 
+and large number of penetration testing plugins.
+
+

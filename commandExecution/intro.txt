@@ -1,0 +1,8 @@
+Hey, Everyone.
+
+This will be a simple demonstration of command execution on a vulnerable web server.
+We'll be using a CENTOS 7 virtual machine with Damn Vulnerable Web Application (DVWA)
+as our victim server and a ParrotOS virtual machine as the attacker.
+
+To the right you will see a webpage that pings an address. Above you'll see an SSH shell
+to the vulnerable server. 
