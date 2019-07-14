@@ -1,0 +1,15 @@
+
+Hey Everyone, 
+
+In this video we’ll be walking through how to use the popular network mapping tool NMAP. To begin I'll 
+cover some background information on NMAP. Then, I’ll test multiple use cases on a CentOS web server 
+starting with a simple nmap scan, scanning a range of IPs, and testing a range of discovery options 
+including:
+	
+	- Ping scanning
+	- DNS scanning
+	- Operating system detection
+	- Evading Firewalls
+
+Let’s begin!
+

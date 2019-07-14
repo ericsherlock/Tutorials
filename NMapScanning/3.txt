@@ -1,0 +1,35 @@
+ 
+Before you begin, make sure you have the proper permission to perform scanning against any computer 
+or network you plan to test on. Scanning a live network can impact its operation and have unintended
+consequences. As a result, you should only scan networks that you own or have permission to scan. 
+Generally, creating VMs and testing against them (as is the case here) is sufficient.
+
+As a side note, any scan title with (**) by the name will not be demonstrated in this video. For 
+those options, only the command syntax and explination will be provided.
+
+Let's start with some simple NMAP scanning options. The IP address of this computer is 
+192.168.1.113, while the address of the server I'll be scanning is 192.168.1.121. 
+	
+__________________________________________________________________________________________________
+
+Simple scan:	
+
+		nmap [target_IP]
+
+--> Results show the status of the detectable ports along with the protocol, state, and service 
+associated with those ports. 
+__________________________________________________________________________________________________
+	
+**Scanning multiple IP addresses:
+	
+		(simple list): nmap [target_IP_1] [target_IP_2] [target_IP_3] . . .
+		(Range)	     : nmap [First_3_Octets_of_target_IP].1-255 . . .
+		(full subnet): nmap [network/CIDR]
+
+--> The simple list just scans each of the IPs listed and returns the result. The range scan, for 
+example: 'nmap 192.168.1.1-255' will scan all 255 hosts on the network. Lastly, to scan the full 
+subnet an example may look like: 'nmap 192.168.1.1/24'. Since I have only one server up and running,
+I won't be running range scans in this video. 
+________________________________________________________________________________________________
+
+

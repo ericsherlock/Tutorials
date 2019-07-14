@@ -1,0 +1,10 @@
+
+Let's start with some background information. 
+
+NMAP is a free and open-source network scanner created by Gordon Lyon and is actively maintained 
+by the open-source community. NMAP can be used to audit and troubleshoot computer networks. This
+includes techniques for mapping out networks including but not limited to port scanning, OS detection
+, and version detection. Currently released under the GNU General Public License, NMAP can be used 
+for a number of other tasks and is an essential tool for system administrators and penetration testers 
+alike.
+ 

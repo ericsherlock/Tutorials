@@ -1,0 +1,12 @@
+
+In this video we covered how to perform simple scans, evade firewalls, perform
+OS detection, and more. Whether you are trying to map out a network or
+shore up your own firewall, NMAP is an incredibly useful tool for penetration
+testers and system administrators alike.
+
+That's it for today. 
+
+Don't forget to subscribe to stay up to date for future videos.
+
+Thanks for watching! 
+

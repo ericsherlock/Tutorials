@@ -1,0 +1,41 @@
+__________________________________________________________________________________________________
+
+Ping Only scan:	
+
+		nmap -sn [target_IP or target_IP Range]
+
+--> Used to perform a simple ping of the specified target without scanning any ports. Good for 
+performing quick searches of the target network to see which hosts are online. 
+__________________________________________________________________________________________________
+
+**Specify DNS Server
+
+		nmap --dns-servers [server1, server2,..] [target_IP]
+
+--> The --dns-servers option specifies which DNS servers to be queried when scanning. 
+_______________________________________________________________________________________________
+
+Trace Network Path (Traceroute)
+
+		nmap --traceroute [target_IP]
+
+--> Simply trace and print the network path to the target host.
+_______________________________________________________________________________________________
+
+Scan Specific Ports
+
+		nmap -p [target_port(s)] [target_IP]
+
+--> Specify exactly which ports to scan. Instead of specifying the target ports, you can also 
+put the port service. For example, instead of 'nmap -p 22 111.222.333.444' you can write
+'nmap -p ssh 111.222.333.444'. 
+_______________________________________________________________________________________________
+
+Agressive Scan	
+		nmap -A [target_IP]
+
+--> Agressive scans choose the most commonly used nmap options and automatically adds them to the 
+nmap command. This is generally used for user convinience. When it finishes we'll see it did 
+some common scans like traceroute and OS detection. But it causes a lot of activity and is not 
+very well hidden.  
+________________________________________________________________________________________________ 

@@ -1,0 +1,38 @@
+
+Scan all ports:
+
+		nmap -p- [target_IP]
+
+--> Simple scan of every port for the target IP. 
+_____________________________________________________________________________
+
+Scan showing only open ports:
+
+		nmap --open [target_IP]
+
+--> Scan that omits any filtered or closed ports from the displayed results. 
+____________________________________________________________________________
+
+OS Detection:
+
+		nmap -O [target_IP]
+
+--> Identify the operating system the target host is running. Searches for 
+distinguishable characteristics in the target host's responses. You can
+also have NMAP guess at the operating system if it's not fully known:
+
+OS Detection w/ Guessing:
+
+		nmap -O --osscan-guess [target_ip]
+___________________________________________________________________________
+
+Service Version Detection
+
+		nmap -sV [target_IP]
+			or
+		nmap -sV --version-trace [target_IP]
+
+--> Will attempt to identify the application and version for any open ports
+it detects. You can add the '--version-trace' option to view the nmap
+version scan activity.
+___________________________________________________________________________

@@ -1,0 +1,31 @@
+
+On the screen you will find 3 terminals. 
+
+The top right terminal is a shell open to my current ParrotOS system that I'll be scanning from.
+
+The bottom right terminal is an SSH connection to the server I'll be scanning. In order to see the 
+NMAP connection attempts, I am running a Netcat listener to monitor certain ports that I know will
+be scanned by NMAP. The ports I'm monitoring access attempts to are: 22, 443, 1234. For clarity, 
+the tab-port mapping is as follows: 
+
+		Tab 1 --> Port 22 
+		Tab 2 --> Port 443
+		Tab 3 --> Port 1234
+
+The Netcat command I'll be using to monitor each port is: 
+
+		nc -l -v -p [PORT #] -k
+
+Here is a rundown of the command: 
+	
+		nc    --> Netcat command
+		-l    --> Set up listener
+		-v    --> Display verbose output
+		-p    --> Designate port to listen to
+		-k    --> Keep the listener open
+
+The current terminal will be showing each of the NMAP command and syntax along with an explanation 
+of what they're doing. 
+
+Let's begin!
+

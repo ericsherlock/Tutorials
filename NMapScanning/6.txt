@@ -1,0 +1,40 @@
+
+Firewall Evasion with Decoys
+
+		nmap -D [decoy_IP1, decoy1_IP2, ...|RND:#] [target_IP]
+
+--> This nmap scan will send packets from decoy IP addresses, 
+effectively hiding the tester's IP address among others in a group
+making it look like the target is being scanned from multiple sources.
+_______________________________________________________________________________
+
+**Zombie scans:
+
+		nmap -sI [zombie_host_IP] [target_IP]
+
+--> Scan that uses an idle computer to scan the target system for you. 
+Not very different from using a proxy to route your traffic.
+_______________________________________________________________________________
+
+**Spoof MAC Address:
+
+		nmap --spoof-mac [vendor|MAC|0] [target_IP]
+
+--> Using the --spoof-mac option randomly generates a MAC address for the
+penetration testers computer. 'vendor' generates a MAC from a specified vendor.
+'MAC' allows you to specfiy a specific address yourself. '0' generates a random
+address. 
+_______________________________________________________________________________
+
+Port Reason Codes
+
+		nmap -p [PORT_#] --reason [target_IP]
+
+--> This scan returns a reason why a port is in its given state. This can help
+with determining the protection mechanisms enabled for the given ports. Resonses
+are generally as follows: 
+		
+		Response: SYN-ACK 		--> Ports considered open
+			  Conn-Refused 		--> Ports are closed
+			  No Response 		--> Ports are Firewall Protected
+			  ICMP Port Unreachable --> Port Protocol Mismatch
