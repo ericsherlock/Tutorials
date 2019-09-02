@@ -1,0 +1,41 @@
+
+
+The last thing we will cover today is how to use Netcat to create a shell on a remote system.
+This is done by utilizing one of the more powerfull features of Netcat the '-e' option. According
+to the Natcat manual page, the '-e' option allows you to specify a file to execute after connect. 
+
+This means that a tester can have netcat start a shell on successful connection. The command
+for this takes two separate parts. On the server on which you want to open a shell, run the command:
+
+		REMOTE SERVER:         netcat -v -l -p 'port_#' -e 'filename'
+
+A rundown of the command options are: 
+			-v : Verbose output
+			-l : Set up a listener
+			-p : Port number
+			-e : Execute file upon successful connection 
+
+On the client that you want to connect to run:
+
+		CLIENT:                netcat 'server_IP' 'port_#'
+
+
+After running these commands I was successfully able to open a shell on my remote server and 
+am able to run some basic commands! Upon login, (as the client) I am given the roles available 
+to the current user on the remote server system. In my remote server, you can see I'm signed in 
+as root, so I now have root access to the entire system! Thus, we have created a remote shell on a
+target system. 
+
+
+
+
+
+
+
+
+That's it for today.
+
+Thanks for watching!
+
+
+

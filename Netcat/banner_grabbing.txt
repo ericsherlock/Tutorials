@@ -1,0 +1,25 @@
+
+According to Cybersecurity by Thomas Mowbray, a banner is the first reseponse a service makes 
+after a TCP connection is made to an open port. 
+
+Banner grabbing is the process of sending requests to a server specifically to gather the 
+information in the returned banner. This process is often used by penetration testers during 
+the information gathering phase to gain valuable insight on the target server. 
+
+
+The command to grab a banner using netcat is:
+
+			echo "" | netcat -n -v -w1 [target_server_IP] port_#
+
+A rundown of the options:
+
+				-n : Numeric-only IP addresses, no DNS
+				-v : Verbose output (Use twice to be more verbose)
+				-w1: Timeout for connects and final net reads
+
+When I run this command on the HTTP port against remoteTwo, I get valuable information 
+back about the server including: the server operating system, server program and its 
+version, among other things.
+
+
+

@@ -1,0 +1,23 @@
+
+The first thing we'll do is create simple TCP connection between two different hosts.
+
+For this video I have multiple remote VMs that I'll be testing against. I have added an entry 
+into my /etc/hosts file that maps my cloud server IP addresses to the names 'remoteVM' and
+'remoteTwo'. Here, I'll use the names in the hosts file and their corresponding IPs analogously.
+
+The following command with no options intitiates a simple TCP connection to a specified 
+server on a particular port (I configured my SSH daemon to run on port 5123):
+
+					netcat [options] host_IP port
+
+When I attempt to connect to my server on that port, you can see it returns 
+an SSH output message upon connection.
+
+A few other commonly used options include: 
+			-e filename  --> Specify filename to execute after successful connection.
+			-l           --> Listen for inbound connections
+			-t           --> enables telnet negotiation
+			-u           --> UDP Mode 
+			-z           --> Zero-I/O mode, used for scanning
+
+

@@ -1,0 +1,16 @@
+
+
+Port scanning with netcat is done using the -z option. If you want more information on port
+scanning I go over it in my NMap video, link in description. 
+
+The command is as follows: 
+
+					netcat -z 'scan_target_IP' 'Port_range'
+
+Often times the '-v' option is added after the '-z' option to specify a verbose output.
+
+If I run a port scan on a remote server, you can see from my output, this process 
+is rather slow. It's recommended that for larger jobs you use a dedicated scanning 
+tool like NMap instead.
+
+ 

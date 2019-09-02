@@ -1,0 +1,41 @@
+
+
+Now we are going to look at transfering files between two hosts using Netcat.
+In order to accomplish this we need to set up one host to listen for connections, 
+while we set up the other host to establish a connection. Here, I'll be setting up
+my remote server to listen on port 4343. 
+
+
+The following command syntax will open a listener on my remote server:
+
+		REMOTE SERVER:		netcat -l -p 'port_#'  
+
+I'll be connecting to my remote server using:
+
+		CLIENT:			netcat 'remote_VM_IP' 'port_#'
+
+
+Upon successful connection, it can be seen that it acts as a simple IM service. 
+When I type in the console on one screen and press enter, that output appear on the 
+other screen. Thus, we have successfully connected our servers through netcat. 
+
+We can use this same functionality to create a file transfer tool. To accomplish this 
+we need to do 2 things:
+
+				1) We need our listener to forward any input it receives into a file
+				2) We need to input our file contents to the netcat command to send 
+						the file through our connection. 
+
+The following command sets up our listener to forward any given input to a file:
+
+		REMOTE SERVER:		netcat -l -p 'port_#' > receiving
+
+While the next command inputs the file contents into the netcat command (we'll quickly
+make a file called sending containing a small text message):
+
+		CLIENT:  				netcat 'remote_VM_IP' 'port_#' < sending
+
+When I run these commands, I get a new file on my remote server called 'receiving' and it
+has the file contents that I put into sending. 
+
+

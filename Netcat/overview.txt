@@ -1,0 +1,38 @@
+
+Hey Everyone!
+
+In this video we'll be going through a tutorial on the popular networking utility: Netcat. 
+
+Originally created by an engineer called "The Hobit" (available for contact at: hobbit@avian.org)
+for UNIX systems and released in 1996, Netcat is often refered to as the "Swizz Army Knife" of 
+Linux networking tools. 
+
+According to the manual page, Netcat "reads and writes data across network connections, 
+using TCP and UDP protocol. It is designed to be a reliable back-end tool that can be 
+used directly or easily driven by other programs and scripts."
+
+Netcat is often on "Top 10" lists for networking-based and penetration testing tools due to 
+its versatility and effectivness. Generally, it comes pre-installed on virtually all Linux 
+OS distributions. A few of the more popular features include:
+
+		--> Create TCP / UDP connections
+		--> Port Scanning
+		--> Transferring and Executing files
+		--> Banner Grabbing
+		--> Installing backdoors
+
+In this walkthrough I'll demonstrate each of the capabilities mentioned above and introduce 
+a few other features along the way. 
+
+On the screen you'll see 3 different terminals. 
+
+The current terminal will show the commands I'm running and explain how they're working. 
+
+The top-right terminal is an open ssh connection to a virtual server that we'll be working with. 
+
+The bottom-right terminal is a shell open on the current ParrosOS system that I'll be running 
+my commands out of.
+
+Let's get started!
+
+
